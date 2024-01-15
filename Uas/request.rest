@@ -1,0 +1,86 @@
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+
+{
+    "name": "Lampu"
+}
+
+###
+POST http://localhost:10000/categories
+Content-Type: application/json
+{
+    "name": "Ket"
+}
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+  "name":"Philips",
+  "price":33500,
+  "categoryId":1
+}
+
+###
+POST http://localhost:10000/products
+Content-Type: application/json
+
+{
+    "name": "Aoki",
+    "price": 22000,
+    "categoryId": 2
+}
+
+###
+POST http://localhost:10000/suppliers
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "pt.Jaya Sentosa",
+  "createdAt": "2024-01-10T15:16:02.447Z"
+}
+
+
+###
+POST http://localhost:10000/product-transactions
+Content-Type: application/json
+
+{
+  "id": 1,
+  "productId": 1,
+  "supplierId": 1,
+  "qty": 4,
+  "transactionType": "Shopee",
+  "createdAt": "2024-01-10T15:29:32.976Z"
+}
+
+###
+GET http://localhost:10000/product-transactions
+
+###
+GET http://localhost:10000/products/1
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "qty": 1,
+    "total": 33500
+}
+
+###
+POST http://localhost:10000/sales
+Content-Type: application/json
+
+{
+    "productId": 2,
+    "qty": 2,
+    "total":44000 
+}
+
+###
+DELETE  http://localhost:10000/categories/2
